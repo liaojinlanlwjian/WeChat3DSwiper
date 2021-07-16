@@ -1,0 +1,9 @@
+<SearchInput></SearchInput>
+<!--carousel/index.wxml-->
+<swiper class="imageContainer" bindchange="handleChange" previous-margin="50rpx" next-margin="50rpx" circular autoplay>
+  <block wx:for="{{List}}" wx:key="{{index}}">
+    <swiper-item class="item">
+      <image class="itemImg {{currentIndex == index ? 'active': ''}}" src="{{ item.imgsrc }}"></image>
+    </swiper-item>
+  </block>
+</swiper>
